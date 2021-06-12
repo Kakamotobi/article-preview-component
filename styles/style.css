@@ -27,11 +27,15 @@ body {
 .container {
 	width: 330px;
 	height: 510px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	background-color: #fff;
 	border-radius: 10px;
 	overflow: hidden;
 }
 
+/* Hero */
 .hero {
 	width: 100%;
 	height: 200px;
@@ -43,8 +47,9 @@ body {
 	object-fit: cover;
 }
 
+/* Main Contents */
 main {
-	padding: 40px 30px 30px;
+	padding: 40px 30px 20px;
 }
 
 .title {
@@ -55,7 +60,7 @@ main {
 
 .title-desc {
 	letter-spacing: 0.3px;
-	line-height: 1.5;
+	line-height: 1.61;
 }
 
 .author {
@@ -103,6 +108,40 @@ main {
 	margin-bottom: 2px;
 }
 
+/* Share Active */
+.share-active {
+	height: 65px;
+	padding-inline: 32px;
+	display: flex;
+	align-items: center;
+	background-color: var(--drkGreyBlue);
+	visibility: hidden;
+}
+
+.share-active p {
+	margin-right: 20px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	color: var(--greyBlue);
+}
+
+.sns-icons {
+	flex-grow: 1;
+}
+
+.sns-icons img {
+	margin-right: 15px;
+}
+
+.share-icon-btn.active {
+	background-color: var(--desatDrkBlue);
+}
+
+.share-icon.active {
+	filter: brightness(0) invert(1);
+}
+
+/* Footer */
 .attribution {
 	font-size: 11px;
 	text-align: center;
@@ -115,7 +154,8 @@ main {
 	.container {
 		width: 730px;
 		height: 280px;
-		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
 	}
 
 	.hero {
