@@ -233,4 +233,16 @@ main {
 	.sns-icons {
 		flex-grow: 0;
 	}
+
+	.share-icon-btn {
+		transition: all ease-in-out 150ms;
+	}
+
+	.share-icon-btn:hover {
+		background-color: var(--drkGreyBlue);
+	}
+
+	.share-icon-btn:hover > .share-icon {
+		filter: brightness(0) invert(1);
+	}
 }
