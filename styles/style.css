@@ -48,8 +48,14 @@ body {
 }
 
 /* Main Contents */
+.content-wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 main {
-	padding: 40px 30px 20px;
+	padding: 40px 30px 0;
 }
 
 .title {
@@ -65,6 +71,7 @@ main {
 
 .author {
 	padding-inline: 32px;
+	padding-bottom: 20px;
 	display: flex;
 	align-items: center;
 }
@@ -93,6 +100,10 @@ main {
 	color: var(--greyBlue);
 }
 
+.hide-author {
+	display: none;
+}
+
 .share-icon-btn {
 	width: 32px;
 	height: 32px;
@@ -110,16 +121,20 @@ main {
 }
 
 /* Share Active Mobile */
-.share-active-mobile {
-	height: 65px;
+.share-active {
+	height: 43px;
 	padding-inline: 32px;
+	padding-bottom: 20px;
+	padding-top: 10px;
 	display: flex;
 	align-items: center;
 	background-color: var(--drkGreyBlue);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	display: none;
 }
 
-.share-active-mobile p {
+.share-active p {
 	margin-right: 20px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -135,6 +150,7 @@ main {
 }
 
 .share-icon-btn.active {
+	align-self: center;
 	background-color: var(--desatDrkBlue);
 }
 
@@ -142,8 +158,8 @@ main {
 	filter: brightness(0) invert(1);
 }
 
-.share-active-desktop {
-	display: none;
+.display-share {
+	display: flex;
 }
 
 /* Footer */
@@ -195,23 +211,23 @@ main {
 		padding-bottom: 30px;
 	}
 
+	.hide-author {
+		display: flex;
+	}
+
 	/* Share Active Desktop */
-	.share-active-desktop {
+	.share-active {
 		width: 248px;
 		height: 55px;
-		padding-inline: 0;
-		display: flex;
-		align-items: center;
+		padding: 0;
 		justify-content: center;
-		background-color: var(--drkGreyBlue);
 		border-radius: 10px;
 		position: absolute;
 		right: -70px;
 		top: 48%;
-		display: none;
 	}
 
-	.share-active-desktop::after {
+	.share-active::after {
 		content: "";
 		width: 0px;
 		height: 0px;
@@ -224,12 +240,10 @@ main {
 		bottom: -20px;
 	}
 
-	.share-active-desktop p {
-		margin-right: 20px;
-		text-transform: uppercase;
-		letter-spacing: 5px;
-		color: var(--greyBlue);
+	.share-icon-btn.active {
+		display: none;
 	}
+
 	.sns-icons {
 		flex-grow: 0;
 	}
